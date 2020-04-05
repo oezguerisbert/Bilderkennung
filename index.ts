@@ -1,8 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 
-
-
-app.whenReady().then(() => {
+function whenRead() {
     // Create the browser window.
     let win = new BrowserWindow({
         width: 1280,
@@ -14,4 +12,7 @@ app.whenReady().then(() => {
 
     // and load the index.html of the app.
     win.loadFile('./src/index.html');
-});
+}
+
+
+app.whenReady().then(whenRead);

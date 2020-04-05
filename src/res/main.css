@@ -5,9 +5,17 @@ body {
   margin: 0px;
   box-sizing: border-box;
 }
-canvas {
+video {
   position: absolute;
   width: 100%;
   height: 100%;
   background: #000;
+  z-index: 1;
+}
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: transparent;
 }

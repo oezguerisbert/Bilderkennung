@@ -1,92 +1,66 @@
 let imageCapture = null;
 let canvas = null;
+let video = null;
+let streams = null;
 let fps = 30;
 let ratio = 0.75;
+let opts = {
+    video: {
+        width: Math.floor(1280 * ratio),
+        height: Math.floor(720 * ratio),
+    },
+};
 $(document).ready(() => {
+    video = $('video')[0];
     canvas = $('canvas')[0];
-    if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices
-            .getUserMedia({
-                video: {
-                    width: Math.floor(1280 * ratio),
-                    heiht: Math.floor(720 * ratio),
-                },
-            })
-            .then(function (stream) {
-                console.log('??????');
-                let mediaStreamTrack = stream.getVideoTracks()[0];
-                imageCapture = new ImageCapture(mediaStreamTrack);
-                setTimeout(update, 1000 / fps);
-            })
-            .catch(function (e) {});
-    }
+    setTimeout(() => {
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices
+                .getUserMedia(opts)
+                .then(function (stream) {
+                    streams = stream;
+                    video.srcObject = streams;
+                    video.play();
+                    setTimeout(update, 1000 / fps);
+                })
+                .catch(function (e) {
+                    console.trace(e);
+                });
+        }
+    }, 100);
 });
 function update() {
-    imageCapture
-        .grabFrame()
-        .then((img) => {
-            canvas.width = getComputedStyle(canvas).width.split('px')[0];
-            canvas.height = getComputedStyle(canvas).height.split('px')[0];
+    let canvas2 = new OffscreenCanvas(opts.video.width, opts.video.height);
+    let ctx = canvas2.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for (let index = 0; index < imgData.data.length; index += 4) {
+        let color = {
+            r: imgData.data[index],
+            b: imgData.data[index + 1],
+            g: imgData.data[index + 2],
+            a: imgData.data[index + 3],
+        };
+        // let x = index % opts.video.width;
+        // let y = Math.floor(index / opts.video.height) + 1;
 
-            let x = canvas.width / 2 - img.width / 2;
-            let y = canvas.height / 2 - img.height / 2;
-            let ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, x, y, img.width, img.height);
-            let imgData = ctx.getImageData(x, y, img.width, img.height);
-            let pixels = [];
-            for (let index = 0; index < imgData.data.length; index += 4) {
-                pixels.push({
-                    x: index % img.width,
-                    y: Math.floor(index / img.height) + 1,
-                    color: {
-                        r: imgData.data[index],
-                        b: imgData.data[index + 1],
-                        g: imgData.data[index + 2],
-                        a: imgData.data[index + 3],
-                    },
-                });
-            }
-            pixels.forEach((p) => {
-                let tolerance = 1;
-                let tol = tolerance / 100;
-                let pc = p.color;
-                let lighter = {
-                    r: Math.max(255, Math.floor(pc.r * (1 + tol))),
-                    b: Math.max(255, Math.floor(pc.b * (1 + tol))),
-                    g: Math.max(255, Math.floor(pc.g * (1 + tol))),
-                    a: Math.max(255, Math.floor(pc.a * (1 + tol))),
-                };
-                let darker = {
-                    r: Math.min(0, Math.floor(pc.r * (1 - tol))),
-                    b: Math.min(0, Math.floor(pc.b * (1 - tol))),
-                    g: Math.min(0, Math.floor(pc.g * (1 - tol))),
-                    a: Math.min(0, Math.floor(pc.a * (1 - tol))),
-                };
-                // console.log(lighter, darker);
-                let neighbour = {
-                    north: pixels.filter((p2) => {
-                        let bounds = p.y - 1 >= 0 && p2.y == p.y - 1;
-                        return bounds;
-                    }),
-                    south: pixels.filter((p2) => {
-                        let bounds = p.y + 1 <= img.height && p2.y == p.y + 1;
-                        return bounds;
-                    }),
-                    west: pixels.filter((p2) => {
-                        let bounds = p.x - 1 >= 0 && p2.x == p.x - 1;
-                        return bounds;
-                    }),
-                    east: pixels.filter((p2) => {
-                        let bounds = p.x + 1 <= img.width && p2.x == p.x + 1;
-                        return bounds;
-                    }),
-                };
-                // console.log(neighbour);
-            });
-            console.log(conts);
-        })
-        .catch((e) => {});
+        // let tolerance = 10;
+        // let tol = tolerance / 100;
+        // let lighter = {
+        //     r: Math.max(255, Math.floor(color.r * (1 + tol))),
+        //     b: Math.max(255, Math.floor(color.b * (1 + tol))),
+        //     g: Math.max(255, Math.floor(color.g * (1 + tol))),
+        //     a: Math.max(255, Math.floor(color.a * (1 + tol))),
+        // };
+        // let darker = {
+        //     r: Math.min(0, Math.floor(color.r * (1 - tol))),
+        //     b: Math.min(0, Math.floor(color.b * (1 - tol))),
+        //     g: Math.min(0, Math.floor(color.g * (1 - tol))),
+        //     a: Math.min(0, Math.floor(color.a * (1 - tol))),
+        // };
+    }
+    canvas.getContext('2d').putImageData(imgData, 0, 0);
     setTimeout(update, 1000 / fps);
 }
 
