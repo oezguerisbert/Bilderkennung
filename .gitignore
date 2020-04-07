@@ -26,3 +26,6 @@ config/**
 node_modules/
 node_modules/**
 output/**
+output/
+input/**
+input/
