@@ -1,18 +1,14 @@
-const { app, BrowserWindow } = require('electron');
+import * as Jimp from 'jimp';
 
-function whenRead() {
-    // Create the browser window.
-    let win = new BrowserWindow({
-        width: 1280,
-        height: 720,
-        webPreferences: {
-            nodeIntegration: true,
-        },
-    });
+Jimp.read('input/img.jpg', (err: Error, image) => {
+    if (err) throw err;
+    image
+        .resize(256, 256) // resize
+        .quality(100) // set JPEG quality
+        .write('output/image.jpg'); // save
+    let bitmapData = image.bitmap.data;
+    let width = image.getWidth();
+    let height = image.getHeight();
 
-    // and load the index.html of the app.
-    win.loadFile('./src/index.html');
-}
-
-
-app.whenReady().then(whenRead);
+    // for(let i=0;i<)
+});

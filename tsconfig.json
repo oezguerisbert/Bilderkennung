@@ -9,7 +9,7 @@
         "esModuleInterop": true,
         "allowJs": true,
         "sourceMap": false,
-        "outDir": "output",
+        "outDir": "dist",
         "watch": false
     },
     "exclude": ["node_modules", "output"]
