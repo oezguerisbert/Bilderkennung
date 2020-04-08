@@ -8,6 +8,9 @@ export default class Chunk {
     public addPixel(pixel: Pixel) {
         this.pixels.push(pixel);
     }
+    public getPixels(): Array<Pixel> {
+        return this.pixels;
+    }
     public averageColor(): Color {
         let avgR = 0;
         let avgG = 0;
