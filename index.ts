@@ -10,7 +10,7 @@ Jimp.read('input/img.jpg', (err: Error, image) => {
         width: 0,
         height: 0,
     };
-    let howManyChunksPerRow = 2; //that many chunks per row / column
+    let howManyChunksPerRow = 4; //that many chunks per row / column
 
     chunkoptions.width = Math.floor(width / howManyChunksPerRow);
     chunkoptions.height = Math.floor(height / howManyChunksPerRow);
