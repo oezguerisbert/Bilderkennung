@@ -67,7 +67,7 @@ namespace Filtering {
 
             //Toleranz der Pixel
             let tolerance: Tolerance = {
-                overall: 0.01,
+                overall: 0.1,
             };
             for (let x = 0; x <= width; x++) {
                 for (let y = 0; y <= height; y++) {
