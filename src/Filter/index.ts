@@ -34,8 +34,13 @@ namespace Filtering {
     }
 
     export class FilterTemplate {
-        public apply(image: Jimp): Set<Pixel> {
-            return null;
+        public apply(image: Jimp): Promise<Set<Pixel>> {
+            return new Promise((resolve, reject) => {
+                return reject({
+                    message: 'No Command got used',
+                    index: Number.NaN,
+                });
+            });
         }
     }
 
@@ -59,148 +64,177 @@ namespace Filtering {
         constructor() {
             super();
         }
-        public apply(image: Jimp): Set<Pixel> {
-            // console.log(image);
-            let width = image.getWidth();
-            let height = image.getHeight();
-            let mask: Set<Pixel> = new Set<Pixel>();
+        public apply(image: Jimp): Promise<Set<Pixel>> {
+            return new Promise<Set<Pixel>>(async (resolve, reject) => {
+                let width = image.getWidth();
+                let height = image.getHeight();
+                let mask: Set<Pixel> = new Set<Pixel>();
 
-            //Toleranz der Pixel
-            let tolerance: Tolerance = {
-                overall: 0.1,
-            };
-            for (let x = 0; x <= width; x++) {
-                for (let y = 0; y <= height; y++) {
-                    //jetziges Pixel
-                    let currentPixel: RGBA = Jimp.intToRGBA(
-                        image.getPixelColour(x, y)
-                    );
+                //Toleranz der Pixel
+                let tolerance: Tolerance = {
+                    overall: 0.1,
+                };
+                for (let x = 0; x <= width; x++) {
+                    for (let y = 0; y <= height; y++) {
+                        //jetziges Pixel
+                        let currentPixel: RGBA = Jimp.intToRGBA(
+                            image.getPixelColour(x, y)
+                        );
 
-                    //Nachbarn finden
-                    let neighbours: Neighbourings = {};
-                    if (y > 0 && y <= height) {
-                        let c = Jimp.intToRGBA(image.getPixelColour(x, y - 1));
-                        neighbours.north = {
+                        //Nachbarn finden
+                        let neighbours: Neighbourings = {};
+                        if (y > 0 && y <= height) {
+                            let c = Jimp.intToRGBA(
+                                image.getPixelColour(x, y - 1)
+                            );
+                            neighbours.north = {
+                                x: x,
+                                y: y - 1,
+                                color: {
+                                    r: c.r,
+                                    g: c.g,
+                                    b: c.b,
+                                    a: c.a,
+                                },
+                            };
+                        }
+                        if (y >= 0 && y < height) {
+                            let c = Jimp.intToRGBA(
+                                image.getPixelColour(x, y + 1)
+                            );
+                            neighbours.south = {
+                                x: x,
+                                y: y + 1,
+                                color: {
+                                    r: c.r,
+                                    g: c.g,
+                                    b: c.b,
+                                    a: c.a,
+                                },
+                            };
+                        }
+                        if (x > 0 && x < width) {
+                            let c = Jimp.intToRGBA(
+                                image.getPixelColour(x + 1, y)
+                            );
+                            neighbours.east = {
+                                x: x + 1,
+                                y: y,
+                                color: {
+                                    r: c.r,
+                                    g: c.g,
+                                    b: c.b,
+                                    a: c.a,
+                                },
+                            };
+                        }
+                        if (x >= 0 && x <= width) {
+                            let c = Jimp.intToRGBA(
+                                image.getPixelColour(x - 1, y)
+                            );
+                            neighbours.west = {
+                                x: x - 1,
+                                y: y,
+                                color: {
+                                    r: c.r,
+                                    g: c.g,
+                                    b: c.b,
+                                    a: c.a,
+                                },
+                            };
+                        }
+                        let pix = {
                             x: x,
-                            y: y - 1,
-                            color: {
-                                r: c.r,
-                                g: c.g,
-                                b: c.b,
-                                a: c.a,
-                            },
-                        };
-                    }
-                    if (y >= 0 && y < height) {
-                        let c = Jimp.intToRGBA(image.getPixelColour(x, y + 1));
-                        neighbours.south = {
-                            x: x,
-                            y: y + 1,
-                            color: {
-                                r: c.r,
-                                g: c.g,
-                                b: c.b,
-                                a: c.a,
-                            },
-                        };
-                    }
-                    if (x > 0 && x < width) {
-                        let c = Jimp.intToRGBA(image.getPixelColour(x + 1, y));
-                        neighbours.east = {
-                            x: x + 1,
                             y: y,
                             color: {
-                                r: c.r,
-                                g: c.g,
-                                b: c.b,
-                                a: c.a,
+                                r: currentPixel.r,
+                                g: currentPixel.g,
+                                b: currentPixel.b,
+                                a: currentPixel.a,
                             },
                         };
-                    }
-                    if (x >= 0 && x <= width) {
-                        let c = Jimp.intToRGBA(image.getPixelColour(x - 1, y));
-                        neighbours.west = {
-                            x: x - 1,
-                            y: y,
-                            color: {
-                                r: c.r,
-                                g: c.g,
-                                b: c.b,
-                                a: c.a,
-                            },
-                        };
-                    }
-                    let pix = {
-                        x: x,
-                        y: y,
-                        color: {
-                            r: currentPixel.r,
-                            g: currentPixel.g,
-                            b: currentPixel.b,
-                            a: currentPixel.a,
-                        },
-                    };
-                    let range = this.inRange(pix, neighbours, tolerance);
-                    if (range.length > 0) {
-                        //Hinzufügen auf die Konturen-Liste
-                        range.forEach((c) => mask.add);
+                        let range = await this.inRange(
+                            pix,
+                            neighbours,
+                            tolerance
+                        );
+                        if (range.length > 0) {
+                            //Hinzufügen auf die Konturen-Liste
+                            range.forEach((c) => mask.add);
+                        }
                     }
                 }
-            }
-
-            console.log(mask);
-            return mask;
+                return resolve(mask);
+            });
         }
         private inRange(
             starter: Pixel,
             neighbours: Neighbourings,
             tolerance: Tolerance
-        ): Array<Pixel> {
-            let result: Array<Pixel> = Array<Pixel>();
-            let keys = Object.keys(neighbours);
+        ): Promise<Array<Pixel>> {
+            return new Promise<Array<Pixel>>((resolve, reject) => {
+                let result: Array<Pixel> = Array<Pixel>();
+                let keys = Object.keys(neighbours);
 
-            //Vergleich-Farben
-            let compareColors: CompareColors = {
-                lighter: null,
-                darker: null,
-            };
-            if (tolerance.overall) {
-                compareColors.lighter = {
-                    r: Math.floor(starter.color.r * (1 + tolerance.overall)),
-                    g: Math.floor(starter.color.g * (1 + tolerance.overall)),
-                    b: Math.floor(starter.color.b * (1 + tolerance.overall)),
-                    a: Math.floor(starter.color.a * (1 + tolerance.overall)),
+                //Vergleich-Farben
+                let compareColors: CompareColors = {
+                    lighter: null,
+                    darker: null,
                 };
-                compareColors.darker = {
-                    r: Math.floor(starter.color.r * (1 - tolerance.overall)),
-                    g: Math.floor(starter.color.g * (1 - tolerance.overall)),
-                    b: Math.floor(starter.color.b * (1 - tolerance.overall)),
-                    a: Math.floor(starter.color.a * (1 - tolerance.overall)),
-                };
-            }
-
-            // console.log(neighbours);
-            keys.forEach((key) => {
-                let neighbourPixel: Pixel = neighbours[key];
-                let r = neighbourPixel.color.r;
-                let g = neighbourPixel.color.g;
-                let b = neighbourPixel.color.b;
-                let a = neighbourPixel.color.a;
-
-                if (
-                    r >= compareColors.darker.r &&
-                    r <= compareColors.lighter.r &&
-                    g >= compareColors.darker.g &&
-                    g <= compareColors.lighter.g &&
-                    b >= compareColors.darker.b &&
-                    b <= compareColors.lighter.b &&
-                    a >= compareColors.darker.a &&
-                    a <= compareColors.lighter.a
-                ) {
-                    result.push(neighbourPixel);
+                if (tolerance.overall) {
+                    compareColors.lighter = {
+                        r: Math.floor(
+                            starter.color.r * (1 + tolerance.overall)
+                        ),
+                        g: Math.floor(
+                            starter.color.g * (1 + tolerance.overall)
+                        ),
+                        b: Math.floor(
+                            starter.color.b * (1 + tolerance.overall)
+                        ),
+                        a: Math.floor(
+                            starter.color.a * (1 + tolerance.overall)
+                        ),
+                    };
+                    compareColors.darker = {
+                        r: Math.floor(
+                            starter.color.r * (1 - tolerance.overall)
+                        ),
+                        g: Math.floor(
+                            starter.color.g * (1 - tolerance.overall)
+                        ),
+                        b: Math.floor(
+                            starter.color.b * (1 - tolerance.overall)
+                        ),
+                        a: Math.floor(
+                            starter.color.a * (1 - tolerance.overall)
+                        ),
+                    };
                 }
+
+                // console.log(neighbours);
+                keys.forEach((key) => {
+                    let neighbourPixel: Pixel = neighbours[key];
+                    let r = neighbourPixel.color.r;
+                    let g = neighbourPixel.color.g;
+                    let b = neighbourPixel.color.b;
+                    let a = neighbourPixel.color.a;
+
+                    if (
+                        r >= compareColors.darker.r &&
+                        r <= compareColors.lighter.r &&
+                        g >= compareColors.darker.g &&
+                        g <= compareColors.lighter.g &&
+                        b >= compareColors.darker.b &&
+                        b <= compareColors.lighter.b &&
+                        a >= compareColors.darker.a &&
+                        a <= compareColors.lighter.a
+                    ) {
+                        result.push(neighbourPixel);
+                    }
+                });
+                return result;
             });
-            return result;
         }
     }
     interface CompareColors {

@@ -3,6 +3,7 @@ import Pixel, { Color } from '../Pixel';
 import FilterNS from '../Filter';
 import Jimp from 'jimp';
 import { EventEmitter } from 'events';
+// const opencv = require('./../../opencv.js');
 export default class Main extends EventEmitter {
     private image2: Jimp = null;
     private chunks: Array<Jimp> = null;
@@ -23,14 +24,14 @@ export default class Main extends EventEmitter {
                 width: 0,
                 height: 0,
             };
-            let howManyChunksPerRow = 4; //that many chunks per row / column
+            let howManyChunksPerRow = 2; //that many chunks per row / column
 
             chunkoptions.width = Math.floor(width / howManyChunksPerRow);
             chunkoptions.height = Math.floor(height / howManyChunksPerRow);
             let squareCh = howManyChunksPerRow * howManyChunksPerRow;
 
             //initialisierung Chunks (Array)
-            this.chunks = new Array<Jimp>(squareCh);
+            this.chunks = new Array<Jimp>();
             for (let i = 0; i < howManyChunksPerRow; i++) {
                 for (let j = 0; j < howManyChunksPerRow; j++) {
                     let x = i * chunkoptions.width;
@@ -56,11 +57,43 @@ export default class Main extends EventEmitter {
         let filter: FilterNS.FilterTemplate = FilterNS.Filter.of(
             FilterNS.Filters.Contouring
         );
-        this.parallelCalculate(filter, this.image2);
+        this.applyFilter(filter, this.chunks);
     }
-    private parallelCalculate(f: FilterNS.FilterTemplate, image: Jimp) {
-        // console.log(filter);
+    private applyFilter(f: FilterNS.FilterTemplate, chunks: Array<Jimp>) {
+        //Vorbereitung für Berechnen einrichten.
+        let promises: Array<Promise<Set<Pixel>>> = new Array<
+            Promise<Set<Pixel>>
+        >();
+        chunks.forEach((chunk) => {
+            console.log(`preparing chunk '${chunks.indexOf(chunk)}'`);
+            let prom = new Promise<Set<Pixel>>(
+                async (resolve: Function, reject: Function) => {
+                    f.apply(chunk)
+                        .then((r) => resolve(r))
+                        .catch((e) => console.error);
+                    // return resolve(set);
 
-        f.apply(image);
+                    // if (set.size > 0) {
+                    // } else {
+                    //     return reject({
+                    //         message: 'No Pixels found in this chunk',
+                    //         index: chunks.indexOf(chunk),
+                    //     });
+                    // }
+                }
+            );
+            promises.push(prom);
+        });
+        
+        Promise.all(promises)
+            .then((sets) => {
+                console.log(sets);
+            })
+            .catch((reason) => {
+                console.log(reason.message, reason.index);
+            })
+            .finally(() => {
+                console.log('done all.');
+            });
     }
 }
