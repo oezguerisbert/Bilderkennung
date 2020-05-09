@@ -64,6 +64,11 @@ export default class Main extends EventEmitter {
         let promises: Array<Promise<Set<Pixel>>> = new Array<
             Promise<Set<Pixel>>
         >();
+        let overallPixelCount = 0;
+        chunks.forEach((c) => {
+            overallPixelCount += c.getWidth() * c.getHeight();
+        });
+        console.log(`Should be not exceeding: ${overallPixelCount}`);
         chunks.forEach((chunk) => {
             console.log(`preparing chunk '${chunks.indexOf(chunk)}'`);
             let prom = new Promise<Set<Pixel>>(
@@ -71,23 +76,14 @@ export default class Main extends EventEmitter {
                     f.apply(chunk)
                         .then((r) => resolve(r))
                         .catch((e) => console.error);
-                    // return resolve(set);
-
-                    // if (set.size > 0) {
-                    // } else {
-                    //     return reject({
-                    //         message: 'No Pixels found in this chunk',
-                    //         index: chunks.indexOf(chunk),
-                    //     });
-                    // }
                 }
             );
             promises.push(prom);
         });
-        
+
         Promise.all(promises)
             .then((sets) => {
-                console.log(sets);
+                // console.log(sets.length);
             })
             .catch((reason) => {
                 console.log(reason.message, reason.index);

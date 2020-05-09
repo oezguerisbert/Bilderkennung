@@ -34,7 +34,7 @@ namespace Filtering {
     }
 
     export class FilterTemplate {
-        public apply(image: Jimp): Promise<Set<Pixel>> {
+        public apply(image: Jimp): Promise<Array<Set<Pixel>>> {
             return new Promise((resolve, reject) => {
                 return reject({
                     message: 'No Command got used',
@@ -64,8 +64,16 @@ namespace Filtering {
         constructor() {
             super();
         }
-        public apply(image: Jimp): Promise<Set<Pixel>> {
-            return new Promise<Set<Pixel>>(async (resolve, reject) => {
+        /**
+         * Applying a filter on an Image.
+         *
+         * @param {Jimp} image
+         * @returns {Promise<Set<Pixel>>}
+         * @memberof Contouring
+         */
+        public apply(image: Jimp): Promise<Array<Set<Pixel>>> {
+            let result: Array<Set<Pixel>> = new Array<Set<Pixel>>();
+            return new Promise<Array<Set<Pixel>>>(async (resolve, reject) => {
                 let width = image.getWidth();
                 let height = image.getHeight();
                 let mask: Set<Pixel> = new Set<Pixel>();
@@ -81,7 +89,7 @@ namespace Filtering {
                             image.getPixelColour(x, y)
                         );
 
-                        //Nachbarn finden
+                        //Nachbar-Pixel aufbereiten
                         let neighbours: Neighbourings = {};
                         if (y > 0 && y <= height) {
                             let c = Jimp.intToRGBA(
@@ -153,87 +161,89 @@ namespace Filtering {
                                 a: currentPixel.a,
                             },
                         };
-                        let range = await this.inRange(
-                            pix,
-                            neighbours,
-                            tolerance
-                        );
-                        if (range.length > 0) {
-                            //Hinzufügen auf die Konturen-Liste
-                            range.forEach((c) => mask.add);
+
+                        let neighbourkeys = Object.keys(neighbours);
+
+                        //Vergleich-Farben
+                        let compareColors: CompareColors = {
+                            lighter: null,
+                            darker: null,
+                        };
+                        if (tolerance.overall) {
+                            compareColors.lighter = {
+                                r: Math.floor(
+                                    pix.color.r * (1 + tolerance.overall)
+                                ),
+                                g: Math.floor(
+                                    pix.color.g * (1 + tolerance.overall)
+                                ),
+                                b: Math.floor(
+                                    pix.color.b * (1 + tolerance.overall)
+                                ),
+                                a: Math.floor(
+                                    pix.color.a * (1 + tolerance.overall)
+                                ),
+                            };
+                            compareColors.darker = {
+                                r: Math.floor(
+                                    pix.color.r * (1 - tolerance.overall)
+                                ),
+                                g: Math.floor(
+                                    pix.color.g * (1 - tolerance.overall)
+                                ),
+                                b: Math.floor(
+                                    pix.color.b * (1 - tolerance.overall)
+                                ),
+                                a: Math.floor(
+                                    pix.color.a * (1 - tolerance.overall)
+                                ),
+                            };
                         }
+
+                        // Überprüfen der Nachbarn
+                        neighbourkeys.forEach((neighbourkey) => {
+                            let neighbourPixel: Pixel =
+                                neighbours[neighbourkey];
+                            let r = neighbourPixel.color.r;
+                            let g = neighbourPixel.color.g;
+                            let b = neighbourPixel.color.b;
+                            let a = neighbourPixel.color.a;
+
+                            if (
+                                r >= compareColors.darker.r &&
+                                r <= compareColors.lighter.r &&
+                                g >= compareColors.darker.g &&
+                                g <= compareColors.lighter.g &&
+                                b >= compareColors.darker.b &&
+                                b <= compareColors.lighter.b &&
+                                a >= compareColors.darker.a &&
+                                a <= compareColors.lighter.a
+                            ) {
+                                if (
+                                    !mask.has(neighbourPixel) &&
+                                    mask.size <
+                                        image.getWidth() * image.getHeight()
+                                ) {
+                                    // let x = JSON.stringify(neighbourPixel);
+                                    // console.log(
+                                    //     `${mask.size}/${
+                                    //         image.getWidth() * image.getHeight()
+                                    //     }/${overallPixelCount} -> adding ${x} to the mask`
+                                    // );
+                                    mask.add(neighbourPixel);
+                                } else {
+                                    if (
+                                        mask.size >
+                                        image.getWidth() * image.getHeight()
+                                    ) {
+                                    }
+                                }
+                            }
+                        });
                     }
                 }
-                return resolve(mask);
-            });
-        }
-        private inRange(
-            starter: Pixel,
-            neighbours: Neighbourings,
-            tolerance: Tolerance
-        ): Promise<Array<Pixel>> {
-            return new Promise<Array<Pixel>>((resolve, reject) => {
-                let result: Array<Pixel> = Array<Pixel>();
-                let keys = Object.keys(neighbours);
-
-                //Vergleich-Farben
-                let compareColors: CompareColors = {
-                    lighter: null,
-                    darker: null,
-                };
-                if (tolerance.overall) {
-                    compareColors.lighter = {
-                        r: Math.floor(
-                            starter.color.r * (1 + tolerance.overall)
-                        ),
-                        g: Math.floor(
-                            starter.color.g * (1 + tolerance.overall)
-                        ),
-                        b: Math.floor(
-                            starter.color.b * (1 + tolerance.overall)
-                        ),
-                        a: Math.floor(
-                            starter.color.a * (1 + tolerance.overall)
-                        ),
-                    };
-                    compareColors.darker = {
-                        r: Math.floor(
-                            starter.color.r * (1 - tolerance.overall)
-                        ),
-                        g: Math.floor(
-                            starter.color.g * (1 - tolerance.overall)
-                        ),
-                        b: Math.floor(
-                            starter.color.b * (1 - tolerance.overall)
-                        ),
-                        a: Math.floor(
-                            starter.color.a * (1 - tolerance.overall)
-                        ),
-                    };
-                }
-
-                // console.log(neighbours);
-                keys.forEach((key) => {
-                    let neighbourPixel: Pixel = neighbours[key];
-                    let r = neighbourPixel.color.r;
-                    let g = neighbourPixel.color.g;
-                    let b = neighbourPixel.color.b;
-                    let a = neighbourPixel.color.a;
-
-                    if (
-                        r >= compareColors.darker.r &&
-                        r <= compareColors.lighter.r &&
-                        g >= compareColors.darker.g &&
-                        g <= compareColors.lighter.g &&
-                        b >= compareColors.darker.b &&
-                        b <= compareColors.lighter.b &&
-                        a >= compareColors.darker.a &&
-                        a <= compareColors.lighter.a
-                    ) {
-                        result.push(neighbourPixel);
-                    }
-                });
-                return result;
+                result.push(mask);
+                return resolve(result);
             });
         }
     }
