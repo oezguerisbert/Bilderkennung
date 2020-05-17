@@ -13,3 +13,4 @@ sh .\install.sh
 ```
 python .\cam_contours.py
 ```
+Um das Program zu beenden "Q" drücken!
