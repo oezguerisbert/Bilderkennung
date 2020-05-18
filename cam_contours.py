@@ -41,13 +41,6 @@ def filler(ls="", rs="", length=64):
     return s
 
 
-def TAB():
-    s = ""
-    c = " "
-    for x in range(0, 4):
-        s += c
-    return s
-
 
 def help():
     print(filler())
