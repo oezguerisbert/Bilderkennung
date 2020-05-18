@@ -1,4 +1,5 @@
 import shutil
+import colorit
 import os
 import sys
 import numpy as np
@@ -16,14 +17,14 @@ def clear():
     _()
 
 
-def filler(ls="", rs="", length=64):
+def filler(ls="", rs=""):
     columns, rows = shutil.get_terminal_size()
     length = columns - 1
     s = ""
-    c = "#"
+    c = colorit.color("█", colorit.colors.BLUE)
     empty = " "
     if len(ls) > 0:
-        s = "# " + ls
+        s = c + empty + ls
         if len(rs) > 0:
             z = length - (len(ls)+len(rs) + 4)
             for x2 in range(0, z):
@@ -31,15 +32,14 @@ def filler(ls="", rs="", length=64):
             s += rs
             s += empty
         else:
-            for x in range(0, (length - (len(s) + 1))):
+            for x in range(0, ((length - (len(s))) + len(c) - 2)):
                 s += empty
-        s += "#"
+        s += c
 
     else:
         for x in range(0, (length - len(s))):
             s += c
     return s
-
 
 
 def help():
@@ -51,13 +51,22 @@ def help():
     print(filler(ls=" "))
     print(filler(ls="Commands:"))
     print(filler(ls="-h[elp]", rs="Opens this help section!"))
-    print(filler(ls="-c[ontours]", rs="Run Programm with ALL windows"))
+    print(filler(ls="-a[ll]", rs="Run Programm with ALL windows"))
     print(filler(ls="-co[ntours-only]", rs="Run Programm with only contours"))
+    print(filler(ls=" "))
+    print(filler(ls=" "))
+    print(filler(ls="Press 'q' to exit the Programm!"))
+
     print(filler())
+    return
 
 
 def cam_contour(only=False):
+
+    print("Press 'q' to exit the Programm!")
+    print("Waiting for Camera to show up...")
     cap = cv2.VideoCapture(0)
+
     colorMode = (0, 0, 255)
 
     while True:
@@ -80,6 +89,7 @@ def cam_contour(only=False):
             if not only:
                 cv2.imshow("image", image)
         if cv2.waitKey(1) == ord("q"):
+            print("Closing Programm...")
             break
     cap.release()
     cv2.destroyAllWindows()
@@ -122,7 +132,7 @@ if len(sys.argv) > 1:
     if "-h" in sys.argv or "-help" in sys.argv:
         help()
         exit()
-    elif "-c" in sys.argv or "-contours" in sys.argv:
+    elif "-a" in sys.argv or "-all" in sys.argv:
         mode = "contours"
     elif "-co" in sys.argv or "-contours-only" in sys.argv:
         mode = "contours-only"
