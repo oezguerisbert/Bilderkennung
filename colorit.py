@@ -1,4 +1,3 @@
-import os
 import sys
 
 
@@ -10,13 +9,6 @@ class colors:
     BLUE = (71, 177, 252)
     PURPLE = (189, 71, 252)
     WHITE = (255, 255, 255)
-
-
-def initColorIt():
-    if sys.platform.startswith('win32'):
-        os.system("cls")
-    elif sys.platform.startswith('darwin') or sys.platform.startswith('linux'):
-        os.system("clear")
 
 
 def color(text, rgb):
