@@ -54,9 +54,9 @@ def help():
     print(filler(ls="-a[ll]", rs="Run Programm with ALL windows"))
     print(filler(ls="-co[ntours-only]", rs="Run Programm with only contours"))
     print(filler(ls=" "))
+    print(filler(ls="Please don't hold stuff to close too the camera, due to lags."))
     print(filler(ls=" "))
     print(filler(ls="Press 'q' to exit the Programm!"))
-
     print(filler())
     return
 
