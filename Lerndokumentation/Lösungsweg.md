@@ -46,7 +46,7 @@ Module, die ich verwendet habe, waren:
     Dieses Kamera Modul wird zum Interagieren mit der Kamera API Schnittstelle verwendet.
 
 - [ts-node](https://www.npmjs.com/package/ts-node)
-    Zum Ausführen des Typescripts in Node.js wird dieses Modul benötigt, Grund: Das Programm wird automatisch kompiliert und ausgeführt.
+    Zum Ausführen des Typescript-Programcodes in Node.js wird dieses Modul benötigt, Grund: Das Programm wird automatisch kompiliert und ausgeführt.
 
 - [nodemon](https://www.npmjs.com/package/nodemon)
     Dieses Modul wird zum automatisierten Neustart des Programms verwendet (Ist aber kein muss)
