@@ -11,6 +11,7 @@ Hier ist eine Systemübersicht der Komponente und Umgebung, die ich verwende/ben
 
 Systemübersicht aller Komponente im Einsatz
 <p align="center">
+
 | Name | Status | 
 |-|-:| 
 | Raspberry PI | muss abgeholt werden | 
@@ -21,6 +22,7 @@ Systemübersicht aller Komponente im Einsatz
 | Tastatur & Maus | vorhanden | 
 | Internetkabel | vorhanden | 
 | Monitor | vorhanden |
+
 </p>
 
 
