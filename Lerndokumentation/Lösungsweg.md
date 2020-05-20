@@ -70,6 +70,7 @@ Diese Sprache existiert schon seit 30 Jahren und ist zurzeit auf Version 3.5+. S
 Bibliotheken die ich verwendet habe:
 
 - OpenCV für Python3
+
     [OpenCV](https://opencv.org/)
 
     Die Hauptwebseite von OpenCV.
