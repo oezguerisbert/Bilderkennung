@@ -162,28 +162,25 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     * ***Update* - Apr 29, 2020**
     * ***Update* - Mai 09, 2020**
     * ***Wichtiges Update* - Mai 17, 2020 -> Umstieg auf Plan B**
-    * ***Update* - Mai 18, 2020***
-    * ***Präsentation* - Mai 21, 2020***
-    * ***Meilenstein: Präsentation* - Mai 22, 2020***
-    * ***Meilenstein: Finale Präsentation* - Mai 24, 2020***
-    * ***Abgabe, Meilenstein: Abgabe Dokumente* - Jun 12, 2020***
-    * ***Abgabe, Meilenstein: SOL Präsentation* - Jun 16, 2020***
+    * ***Update* - Mai 18, 2020**
+    * ***Präsentation* - Mai 21, 2020**
+    * ***Meilenstein: Präsentation* - Mai 22, 2020**
+    * ***Meilenstein: Finale Präsentation* - Mai 24, 2020**
+    * ***Abgabe, Meilenstein: Abgabe Dokumente* - Jun 12, 2020**
+    * ***Abgabe, Meilenstein: SOL Präsentation* - Jun 16, 2020**
 
 - Meilensteine
 
     Die Meilensteine müssen fest definiert sein, damit ich mich so gut wie Möglich auf ein Zeitraffer einhalten kann. Die Funktion dieser Meilensteine ist ein kleiner Checkpoint welcher für sich eine Prozedur abschließt und die nächste Hürde freischaltet.
     Meine Meilensteine wären:
-
-    | Name | Date | Tags | 
-    |:-|-|-:| 
-    | Resume Tag 2 | "Apr 06, 2020" | "Meilenstein, Plan A, Tag 2" | 
-    | Resume | "Apr 09, 2020" | "Meilenstein, Plan A, Tag 3" | 
-    | Plan B | "May 17, 2020" | "Meilenstein, Plan B, Tag 5" | 
-    | Überprüfung Plan A | "Apr 11, 2020" | "Check-Up, Meilenstein, Plan A" | 
-    | Finale Präsentation | "May 24, 2020" | "Meilenstein, Präsentation" | 
-    | Resume | "Apr 10, 2020" | "Meilenstein, Plan A, Tag 4" | 
-    | Abgabe | "Jun 12, 2020" | "Abgabe, Meilenstein" | 
-    | Präsentation | "May 22, 2020" | "Meilenstein, Präsentation" | 
-    | SOL Präsentation | "Jun 16, 2020" | "Abgabe, Meilenstein, Präsentation" | 
-    | Resume Tag 1 | "Apr 05, 2020" | "Meilenstein, Plan A, Tag 1" | 
-
+    
+    * ***Meilenstein: Resume* Tag 1 - Apr 05, 2020**
+    * ***Meilenstein: Resume* Tag 2 - Apr 06, 2020**
+    * ***Meilenstein: Resume* Tag 3 - Apr 09, 2020**
+    * ***Meilenstein: Resume* Tag 4 - Apr 10, 2020**
+    * ***Meilenstein: Überprüfung* Apr 11, 2020**
+    * ***Meilenstein: Plan B* Mai 17, 2020***
+    * ***Meilenstein: Präsentation* Mai 22, 2020***
+    * ***Meilenstein: Präsentation* May 24, 2020**
+    * ***Abgabe* Jun 12, 2020**
+    * ***Abgabe, Meilenstein: SOL Präsentation* - Jun 16, 2020**
