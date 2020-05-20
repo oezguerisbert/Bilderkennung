@@ -86,13 +86,9 @@ Da ich nicht mit der Planung Schwierigkeiten habe, nutze ich mehr Zeit für die 
 Damit ich die Übersicht nicht verliere, habe ich mir als erstes ein Mindmap gemacht:
 
 <figure class="image">
-    <img src="res/Untitled.png" alt="Hier sind meine **ersten Ideen** in einer Mindmap zu sehen.">
-    <figcaption>Hier sind meine **ersten Ideen** in einer Mindmap zu sehen.</figcaption>
+    <img src="res/Untitled.png" alt="Hier sind meine ersten Ideen in einer Mindmap zu sehen.">
+    <figcaption>Hier sind meine ersten Ideen in einer Mindmap zu sehen.</figcaption>
 <figure>
-
-![res/Untitled.png](res/Untitled.png)
-
-Hier sind meine **ersten Ideen** in einer Mindmap zu sehen.
 
 ### Zeitplanung
 
