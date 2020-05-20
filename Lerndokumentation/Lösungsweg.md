@@ -10,7 +10,7 @@ Hier ist eine Systemübersicht der Komponente und Umgebung, die ich verwende/ben
 ![res/SystemübersichtV2.png](res/SystemübersichtV2.png)
 
 Systemübersicht aller Komponente im Einsatz
-
+<p align="center">
 | Name | Status | 
 |-|-:| 
 | Raspberry PI | muss abgeholt werden | 
@@ -20,7 +20,8 @@ Systemübersicht aller Komponente im Einsatz
 | Stromkabel | muss abgeholt werden | 
 | Tastatur & Maus | vorhanden | 
 | Internetkabel | vorhanden | 
-| Monitor | vorhanden | 
+| Monitor | vorhanden |
+</p>
 
 
 Ich habe für das Projekt mich für 2 Wege eingeplant. Der erste Weg war das ich alles von Grund auf selbst mit der Programmiersprache ***Typescript*** verwirkliche***.***
