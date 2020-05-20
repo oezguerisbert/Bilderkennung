@@ -184,3 +184,5 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     * ***Meilenstein: Präsentation* May 24, 2020**
     * ***Abgabe* Jun 12, 2020**
     * ***Abgabe, Meilenstein: SOL Präsentation* - Jun 16, 2020**
+
+
