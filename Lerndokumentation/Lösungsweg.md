@@ -171,10 +171,10 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     Die Meilensteine müssen fest definiert sein, damit ich mich so gut wie Möglich auf ein Zeitraffer einhalten kann. Die Funktion dieser Meilensteine ist ein kleiner Checkpoint welcher für sich eine Prozedur abschließt und die nächste Hürde freischaltet.
     Meine Meilensteine wären:
     
-    - [x] **Apr 05, 2020: Tag 1*Meilenstein: Resume***
-    - [x] **Apr 06, 2020: Tag 2*Meilenstein: Resume***
-    - [x] **Apr 09, 2020: Tag 3*Meilenstein: Resume***
-    - [x] **Apr 10, 2020: Tag 4*Meilenstein: Resume***
+    - [x] **Apr 05, 2020: Tag 1 *Meilenstein: Resume***
+    - [x] **Apr 06, 2020: Tag 2 *Meilenstein: Resume***
+    - [x] **Apr 09, 2020: Tag 3 *Meilenstein: Resume***
+    - [x] **Apr 10, 2020: Tag 4 *Meilenstein: Resume***
     - [x] **Apr 11, 2020: *Meilenstein: Überprüfung***
     - [x] **Mai 17, 2020: *Meilenstein: Plan B* ***
     - [ ] **Mai 22, 2020: *Meilenstein: Präsentation***
