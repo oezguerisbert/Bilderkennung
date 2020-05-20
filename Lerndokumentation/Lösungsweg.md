@@ -95,15 +95,15 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
 > Die erste Checkliste - V1
 
 - Equipment
-    - [ ]  Equipment einrichten
-    - [ ]  Betriebssystem installieren
-    - [ ]  Voraussetzungen erfüllen (Bibliotheken oder Module)
-    - [ ]  Equipment testen
-    - [ ]  Lerndokumentation ***Version 1*** vorbereiten
+    - [x]  Equipment einrichten
+    - [x]  Betriebssystem installieren
+    - [x]  Voraussetzungen erfüllen (Bibliotheken oder Module)
+    - [x]  Equipment testen
+    - [x]  Lerndokumentation ***Version 1*** vorbereiten
 - Programmierung
-    - [ ]  Programmierumgebung einrichten
-    - [ ]  Erste Programmstruktur planen
-    - [ ]  Programmstruktur implementieren
+    - [x]  Programmierumgebung einrichten
+    - [x]  Erste Programmstruktur planen
+    - [x]  Programmstruktur implementieren
     - [ ]  Testing implemetieren
 - Dokumentation
     - [ ]  Praxisdokumentation vorbereiten
@@ -112,7 +112,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     - [ ]  Text verfassen
 - Präsentation
     - [ ]  Powerpoint vorbereiten
-    - [ ]  Visio vorbereiten
+    - [x]  Visio vorbereiten
     - [ ]  FAQ einbauen
 
 ---
