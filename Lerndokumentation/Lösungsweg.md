@@ -123,11 +123,53 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
 
     Die Arbeitspakete sind die einzelnen Schritte die bearbeitet werden müssen. Diese haben bei mir festgelegte Termine zugewiesen bekommen an die ich mich halten sollte.
 
-    [Die Termine](res/Die-Termine-1.csv)
+    |                     |                |                                     | 
+    |---------------------|----------------|-------------------------------------| 
+    | Name                | Date           | Tags                                | 
+    | Planung Tag 1       | "Apr 05, 2020" | "Plan A, Tag 1"                     | 
+    | Resume Tag 1        | "Apr 05, 2020" | "Meilenstein, Plan A, Tag 1"        | 
+    | Weiteres            | "Apr 05, 2020" | "Next Day Tasks, Plan A, Tag 1"     | 
+    | Weiteres            | "Apr 06, 2020" | "Next Day Tasks, Plan A, Tag 2"     | 
+    | Resume Tag 2        | "Apr 06, 2020" | "Meilenstein, Plan A, Tag 2"        | 
+    | Planung Tag 2       | "Apr 06, 2020" | "Plan A, Tag 2"                     | 
+    | Planung Tag 3       | "Apr 09, 2020" | "Plan A, Tag 3"                     | 
+    | Resume              | "Apr 09, 2020" | "Meilenstein, Plan A, Tag 3"        | 
+    | Weiteres            | "Apr 09, 2020" | "Next Day Tasks, Plan A, Tag 3"     | 
+    | Planung Tag 4       | "Apr 10, 2020" | "Plan A, Tag 4"                     | 
+    | Resume              | "Apr 10, 2020" | "Meilenstein, Plan A, Tag 4"        | 
+    | Weiteres            | "Apr 10, 2020" | "Next Day Tasks, Plan A, Tag 4"     | 
+    | Updates             | "Apr 07, 2020" | "Plan A, Updates"                   | 
+    | Updates             | "Apr 08, 2020" | "Plan A, Updates"                   | 
+    | Updates             | "Apr 10, 2020" | "Plan A, Updates"                   | 
+    | Updates             | "Apr 28, 2020" | "Plan A, Updates"                   | 
+    | Updates             | "Apr 29, 2020" | "Plan A, Updates"                   | 
+    | Updates             | "May 09, 2020" | "Plan A, Updates"                   | 
+    | Überprüfung Plan A  | "Apr 11, 2020" | "Check-Up, Meilenstein, Plan A"     | 
+    | Updates             | "May 17, 2020" | "Plan B, Updates"                   | 
+    | Updates             | "May 18, 2020" | "Plan B, Updates"                   | 
+    | Plan B              | "May 17, 2020" | "Meilenstein, Plan B, Tag 5"        | 
+    | Präsentation        | "May 21, 2020" | Präsentation                        | 
+    | Präsentation        | "May 22, 2020" | "Meilenstein, Präsentation"         | 
+    | Finale Präsentation | "May 24, 2020" | "Meilenstein, Präsentation"         | 
+    | SOL Präsentation    | "Jun 16, 2020" | "Abgabe, Meilenstein, Präsentation" | 
+    | Abgabe              | "Jun 12, 2020" | "Abgabe, Meilenstein"               | 
 
 - Meilensteine
 
     Die Meilensteine müssen fest definiert sein, damit ich mich so gut wie Möglich auf ein Zeitraffer einhalten kann. Die Funktion dieser Meilensteine ist ein kleiner Checkpoint welcher für sich eine Prozedur abschließt und die nächste Hürde freischaltet.
     Meine Meilensteine wären:
 
-    [Die Termine](res/Die-Termine-2.csv)
+    |                     |                |                                     | 
+    |---------------------|----------------|-------------------------------------| 
+    | Name                | Date           | Tags                                | 
+    | Resume Tag 2        | "Apr 06, 2020" | "Meilenstein, Plan A, Tag 2"        | 
+    | Resume              | "Apr 09, 2020" | "Meilenstein, Plan A, Tag 3"        | 
+    | Plan B              | "May 17, 2020" | "Meilenstein, Plan B, Tag 5"        | 
+    | Überprüfung Plan A  | "Apr 11, 2020" | "Check-Up, Meilenstein, Plan A"     | 
+    | Finale Präsentation | "May 24, 2020" | "Meilenstein, Präsentation"         | 
+    | Resume              | "Apr 10, 2020" | "Meilenstein, Plan A, Tag 4"        | 
+    | Abgabe              | "Jun 12, 2020" | "Abgabe, Meilenstein"               | 
+    | Präsentation        | "May 22, 2020" | "Meilenstein, Präsentation"         | 
+    | SOL Präsentation    | "Jun 16, 2020" | "Abgabe, Meilenstein, Präsentation" | 
+    | Resume Tag 1        | "Apr 05, 2020" | "Meilenstein, Plan A, Tag 1"        | 
+
