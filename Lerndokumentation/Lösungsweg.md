@@ -11,7 +11,17 @@ Hier ist eine Systemübersicht der Komponente und Umgebung, die ich verwende/ben
 
 Systemübersicht aller Komponente im Einsatz
 
-[Equipment](res/Lösungsweg-Equipment.csv)
+| Name | Status | 
+|-|-:| 
+| Raspberry PI | muss abgeholt werden | 
+| (mini) HDMI Kabel | muss abgeholt werden | 
+| Micro SD-Card | muss abgeholt werden | 
+| Webcam | vorhanden | 
+| Stromkabel | muss abgeholt werden | 
+| Tastatur & Maus | vorhanden | 
+| Internetkabel | vorhanden | 
+| Monitor | vorhanden | 
+
 
 Ich habe für das Projekt mich für 2 Wege eingeplant. Der erste Weg war das ich alles von Grund auf selbst mit der Programmiersprache ***Typescript*** verwirkliche***.***
 Der zweite war ein Backup-Plan falls das mit dem ersten Weg nicht funktionieren sollte.
