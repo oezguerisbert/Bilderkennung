@@ -1,9 +1,6 @@
 # Lösungsweg
 
-Created: May 19, 2020 7:32 PM
-Tags: Ansatz, Idee, Lösung, Planung, Übersicht
-
-# Übersicht
+## Übersicht
 
 Hier ist eine Systemübersicht der Komponente und Umgebung, die ich verwende/benötige.
 
@@ -26,19 +23,19 @@ Systemübersicht aller Komponente im Einsatz
 Ich habe für das Projekt mich für 2 Wege eingeplant. Der erste Weg war das ich alles von Grund auf selbst mit der Programmiersprache ***Typescript*** verwirkliche***.***
 Der zweite war ein Backup-Plan falls das mit dem ersten Weg nicht funktionieren sollte.
 
----
 
-# Organisation
+
+## Organisation
 
 Mithilfe des **IPERKA-Systems** habe ich meine Praxisarbeit aufgeteilt und organisiert.
 
-## Informieren
+### Informieren
 
 Wie vorhin erwähnt habe ich mich für 2 potenzielle Wege informiert, um die Frage zu klären:
 
 > ***Welche Programmiersprache soll ich benutzen?***
 
-### Typescript
+#### Typescript
 
 Diese Sprache basiert auf stark definierten Bausteinen für die Programmierung. Sie ist sehr robust und sehr beliebt bei Programmierern.
 Ich habe mich für Programminterne-Module schlau gemacht und einige gefunden, die meinem Projekt hilfreich sein könnten.
@@ -54,7 +51,7 @@ Module die ich verwendet habe waren:
 - [nodemon](https://www.npmjs.com/package/nodemon)
     Dieses Modul wird zum automatisierten Neustart des Programms verwendet (Ist aber kein muss)
 
-### Python
+#### Python
 
 Diese Sprache existiert schon seit 30 Jahren und ist zurzeit auf Version 3.5+. Sie wird sehr oft von Programmierern verwendet und ist äußerst beliebt, da sie viele Bibliotheken mit sich trägt. Python erleichtert Automatisierungsprozesse und ist eine sehr leichte Programmiersprache. Ich habe mich um diese Sprache entschieden, damit ich meine Python-Skills auffrischen kann und kleineres lerne.
 
@@ -68,11 +65,11 @@ Bibliotheken die ich verwendet habe:
 
 ---
 
-## Planung
+### Planung
 
 Da ich nicht mit der Planung Schwierigkeiten habe, nutze ich mehr Zeit für die Planung, um meine Prozedur zu erleichtern und einen roten Faden bei der Programmierung zu finden.
 
-### Mindmap
+#### Mindmap
 
 Damit ich die Übersicht nicht verliere, habe ich mir als erstes ein Mindmap gemacht:
 
@@ -81,7 +78,7 @@ Damit ich die Übersicht nicht verliere, habe ich mir als erstes ein Mindmap gem
     <figcaption><p>Hier sind meine <strong>ersten Ideen</strong> in einer Mindmap zu sehen.</p></figcaption>
 <figure>
 
-### Zeitplanung
+#### Zeitplanung
 
 Meine Zeitplanung besteht aus 2 Teilen: 
 
