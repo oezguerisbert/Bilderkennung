@@ -123,9 +123,9 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
 
     Die Arbeitspakete sind die einzelnen Schritte die bearbeitet werden müssen. Diese haben bei mir festgelegte Termine zugewiesen bekommen an die ich mich halten sollte.
 
-    |                     |                |                                     | 
     |---------------------|----------------|-------------------------------------| 
     | Name                | Date           | Tags                                | 
+    |---------------------|----------------|-------------------------------------| 
     | Planung Tag 1       | "Apr 05, 2020" | "Plan A, Tag 1"                     | 
     | Resume Tag 1        | "Apr 05, 2020" | "Meilenstein, Plan A, Tag 1"        | 
     | Weiteres            | "Apr 05, 2020" | "Next Day Tasks, Plan A, Tag 1"     | 
@@ -159,9 +159,9 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     Die Meilensteine müssen fest definiert sein, damit ich mich so gut wie Möglich auf ein Zeitraffer einhalten kann. Die Funktion dieser Meilensteine ist ein kleiner Checkpoint welcher für sich eine Prozedur abschließt und die nächste Hürde freischaltet.
     Meine Meilensteine wären:
 
-    |                     |                |                                     | 
     |---------------------|----------------|-------------------------------------| 
     | Name                | Date           | Tags                                | 
+    |---------------------|----------------|-------------------------------------| 
     | Resume Tag 2        | "Apr 06, 2020" | "Meilenstein, Plan A, Tag 2"        | 
     | Resume              | "Apr 09, 2020" | "Meilenstein, Plan A, Tag 3"        | 
     | Plan B              | "May 17, 2020" | "Meilenstein, Plan B, Tag 5"        | 
