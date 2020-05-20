@@ -118,7 +118,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
 
     Die Arbeitspakete sind die einzelnen Schritte die bearbeitet werden müssen. Diese haben bei mir festgelegte Termine zugewiesen bekommen an die ich mich halten sollte.
     
-    * ***Meilenstein:* TAG 1 - Apr 05, 2020**
+    [x] ***Meilenstein:* TAG 1 - Apr 05, 2020**
     
     | Name |  Tags | 
     |:-|-:| 
@@ -126,7 +126,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     | Resume Tag 1 | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A | 
     
-    * ***Meilenstein:* TAG 2 - Apr 06, 2020**
+    [x] ***Meilenstein:* TAG 2 - Apr 06, 2020**
     
     | Name |  Tags | 
     |:-|-:| 
@@ -134,9 +134,9 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     | Resume Tag 2 | Meilenstein, Plan A |
     | Weiteres | Next Day Tasks, Plan A |
     
-    * ***Update* - Apr 07, 2020**
+    [x] ***Update* - Apr 07, 2020**
     
-    * ***Meilenstein:* TAG 3 - Apr 09, 2020**
+    [x] ***Meilenstein:* TAG 3 - Apr 09, 2020**
     
     | Name |  Tags | 
     |:-|-:| 
@@ -144,7 +144,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     | Resume | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A | 
     
-    * ***Meilenstein:* TAG 4 - Apr 10, 2020**
+    [x] ***Meilenstein:* TAG 4 - Apr 10, 2020**
     
     | Name |  Tags | 
     |:-|-:| 
@@ -152,14 +152,14 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     | Resume | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A  | 
     
-    * ***Update* - Apr 08, 2020**
-    * ***Update* - Apr 10, 2020**
-    * ***Meilenstein: Überprüfung/Kontrolle* - Apr 11, 2020**
-    * ***Update* - Apr 28, 2020**
-    * ***Update* - Apr 29, 2020**
-    * ***Update* - Mai 09, 2020**
-    * ***Wichtiges Update* - Mai 17, 2020 -> Umstieg auf Plan B**
-    * ***Update* - Mai 18, 2020**
+    [x] ***Update* - Apr 08, 2020**
+    [x] ***Update* - Apr 10, 2020**
+    [x] ***Meilenstein: Überprüfung/Kontrolle* - Apr 11, 2020**
+    [x] ***Update* - Apr 28, 2020**
+    [x] ***Update* - Apr 29, 2020**
+    [x] ***Update* - Mai 09, 2020**
+    [x] ***Wichtiges Update* - Mai 17, 2020 -> Umstieg auf Plan B**
+    [x] ***Update* - Mai 18, 2020**
     * ***Präsentation* - Mai 21, 2020**
     * ***Meilenstein: Präsentation* - Mai 22, 2020**
     * ***Meilenstein: Finale Präsentation* - Mai 24, 2020**
@@ -171,12 +171,12 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     Die Meilensteine müssen fest definiert sein, damit ich mich so gut wie Möglich auf ein Zeitraffer einhalten kann. Die Funktion dieser Meilensteine ist ein kleiner Checkpoint welcher für sich eine Prozedur abschließt und die nächste Hürde freischaltet.
     Meine Meilensteine wären:
     
-    * ***Meilenstein: Resume* Tag 1 - Apr 05, 2020**
-    * ***Meilenstein: Resume* Tag 2 - Apr 06, 2020**
-    * ***Meilenstein: Resume* Tag 3 - Apr 09, 2020**
-    * ***Meilenstein: Resume* Tag 4 - Apr 10, 2020**
-    * ***Meilenstein: Überprüfung* Apr 11, 2020**
-    * ***Meilenstein: Plan B* Mai 17, 2020***
+    [x] ***Meilenstein: Resume* Tag 1 - Apr 05, 2020**
+    [x] ***Meilenstein: Resume* Tag 2 - Apr 06, 2020**
+    [x] ***Meilenstein: Resume* Tag 3 - Apr 09, 2020**
+    [x] ***Meilenstein: Resume* Tag 4 - Apr 10, 2020**
+    [x] ***Meilenstein: Überprüfung* Apr 11, 2020**
+    [x] ***Meilenstein: Plan B* Mai 17, 2020***
     * ***Meilenstein: Präsentation* Mai 22, 2020***
     * ***Meilenstein: Präsentation* May 24, 2020**
     * ***Abgabe* Jun 12, 2020**
