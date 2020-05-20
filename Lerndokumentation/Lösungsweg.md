@@ -99,7 +99,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     - [x]  Programmierumgebung einrichten
     - [x]  Erste Programmstruktur planen
     - [x]  Programmstruktur implementieren
-    - [ ]  Testing implemetieren
+    - [ ]  Tests implementieren
 - Dokumentation
     - [ ]  Praxisdokumentation vorbereiten
     - [ ]  Code-Snippets erstellen
