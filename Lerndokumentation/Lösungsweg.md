@@ -85,7 +85,7 @@ Meine Zeitplanung besteht aus 2 Teilen:
 1. Die Arbeitstermine der Arbeitsschritte und Meilensteine.
 2. Terminvergabe für die Aktivität: *Dokumentation schreiben.*
 
-Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welchen Weg ich mich entscheide - das selbe Ziel erfüllt.
+Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welchen Weg ich mich entscheide - dasselbe Ziel erfüllt.
 
 > Die erste Checkliste - V1
 
