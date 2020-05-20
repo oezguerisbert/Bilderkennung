@@ -10,10 +10,9 @@ Hier ist eine Systemübersicht der Komponente und Umgebung, die ich verwende/ben
 ![res/SystemübersichtV2.png](res/SystemübersichtV2.png)
 
 Systemübersicht aller Komponente im Einsatz
-<p align="center">
 
 | Name | Status | 
-|-|-:| 
+|:-|-:| 
 | Raspberry PI | muss abgeholt werden | 
 | (mini) HDMI Kabel | muss abgeholt werden | 
 | Micro SD-Card | muss abgeholt werden | 
@@ -22,8 +21,6 @@ Systemübersicht aller Komponente im Einsatz
 | Tastatur & Maus | vorhanden | 
 | Internetkabel | vorhanden | 
 | Monitor | vorhanden |
-
-</p>
 
 
 Ich habe für das Projekt mich für 2 Wege eingeplant. Der erste Weg war das ich alles von Grund auf selbst mit der Programmiersprache ***Typescript*** verwirkliche***.***
@@ -136,8 +133,8 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
 
     Die Arbeitspakete sind die einzelnen Schritte die bearbeitet werden müssen. Diese haben bei mir festgelegte Termine zugewiesen bekommen an die ich mich halten sollte.
 
-    | Name  | Date  | Tags | 
-    |--|-|-:| 
+    | Name | Date | Tags | 
+    |:-|-|-:| 
     | Planung Tag 1 | "Apr 05, 2020" | "Plan A, Tag 1" | 
     | Resume Tag 1 | "Apr 05, 2020" | "Meilenstein, Plan A, Tag 1" | 
     | Weiteres | "Apr 05, 2020" | "Next Day Tasks, Plan A, Tag 1" | 
@@ -172,7 +169,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     Meine Meilensteine wären:
 
     | Name | Date | Tags | 
-    |-|-|-:| 
+    |:-|-|-:| 
     | Resume Tag 2 | "Apr 06, 2020" | "Meilenstein, Plan A, Tag 2" | 
     | Resume | "Apr 09, 2020" | "Meilenstein, Plan A, Tag 3" | 
     | Plan B | "May 17, 2020" | "Meilenstein, Plan B, Tag 5" | 
