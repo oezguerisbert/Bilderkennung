@@ -70,14 +70,13 @@ Diese Sprache existiert schon seit 30 Jahren und ist zurzeit auf Version 3.5+. S
 Bibliotheken die ich verwendet habe:
 
 - OpenCV für Python3
+    [OpenCV](https://opencv.org/)
 
-[OpenCV](https://opencv.org/)
+    Die Hauptwebseite von OpenCV.
+    
+    [OpenCV: Image Processing in OpenCV](https://docs.opencv.org/3.4/d2/d96/tutorial_py_table_of_contents_imgproc.html)
 
-Die Hauptwebseite von OpenCV.
-
-[OpenCV: Image Processing in OpenCV](https://docs.opencv.org/3.4/d2/d96/tutorial_py_table_of_contents_imgproc.html)
-
-Die Reference der Bibliothek wo ich die meisten Codebeispiele übernommen habe.
+    Die Reference der Bibliothek wo ich die meisten Codebeispiele übernommen habe.
 
 ---
 
