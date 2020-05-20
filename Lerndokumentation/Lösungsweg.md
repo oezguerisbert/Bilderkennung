@@ -122,16 +122,16 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     
     | Name |  Tags | 
     |:-|-:| 
-    | Planung Tag 1 | Plan A | 
-    | Resume Tag 1 | Meilenstein, Plan A | 
+    | Planung | Plan A | 
+    | Resume | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A | 
     
     - [x]  **Apr 06, 2020: Tag 2 *Meilenstein:***
     
     | Name |  Tags | 
     |:-|-:| 
-    | Planung Tag 2 | Plan A, Tag 2 |
-    | Resume Tag 2 | Meilenstein, Plan A |
+    | Planung | Plan A|
+    | Resume | Meilenstein, Plan A |
     | Weiteres | Next Day Tasks, Plan A |
     
     - [x] **Apr 07, 2020: *Update***
@@ -140,7 +140,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     
     | Name |  Tags | 
     |:-|-:| 
-    | Planung Tag 3 | Plan A | 
+    | Planung | Plan A | 
     | Resume | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A | 
     
@@ -148,7 +148,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     
     | Name |  Tags | 
     |:-|-:| 
-    | Planung Tag 4 | Plan A | 
+    | Planung | Plan A | 
     | Resume | Meilenstein, Plan A | 
     | Weiteres | Next Day Tasks, Plan A  | 
     
