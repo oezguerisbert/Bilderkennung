@@ -176,7 +176,7 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     - [x] **Apr 09, 2020: Tag 3 *Meilenstein: Resume***
     - [x] **Apr 10, 2020: Tag 4 *Meilenstein: Resume***
     - [x] **Apr 11, 2020: *Meilenstein: Überprüfung***
-    - [x] **Mai 17, 2020: *Meilenstein: Plan B* ***
+    - [x] **Mai 17, 2020: *Meilenstein: Plan B***
     - [ ] **Mai 22, 2020: *Meilenstein: Präsentation***
     - [ ] **May 24, 2020: *Meilenstein: Präsentation***
     - [ ] **Jun 12, 2020: *Abgabe***
