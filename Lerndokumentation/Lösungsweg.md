@@ -40,10 +40,10 @@ Wie vorhin erwähnt habe ich mich für 2 potenzielle Wege informiert, um die Fra
 Diese Sprache basiert auf stark definierten Bausteinen für die Programmierung. Sie ist sehr robust und sehr beliebt bei Programmierern.
 Ich habe mich für Programminterne-Module schlau gemacht und einige gefunden, die meinem Projekt hilfreich sein könnten.
 
-Module die ich verwendet habe waren:
+Module, die ich verwendet habe, waren:
 
 - [camera](https://www.npmjs.com/package/camera)
-    Dieses Kamera Modul wird zum interagieren mit der Kamera API Schnittstelle verwendet.
+    Dieses Kamera Modul wird zum Interagieren mit der Kamera API Schnittstelle verwendet.
 
 - [ts-node](https://www.npmjs.com/package/ts-node)
     Zum Ausführen des Typescripts in Node.js wird dieses Modul benötigt, Grund: Das Programm wird automatisch kompiliert und ausgeführt.
