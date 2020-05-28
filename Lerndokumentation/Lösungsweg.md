@@ -160,9 +160,9 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     - [x] **Mai 09, 2020: *Update***
     - [x] **Mai 17, 2020: Tag 5 *Wichtiges Update* -> Umstieg auf Plan B**
     - [x] **Mai 18, 2020: *Update***
-    - [ ] **Mai 21, 2020: *Präsentation***
-    - [ ] **Mai 22, 2020: *Meilenstein: Präsentation***
-    - [ ] **Mai 24, 2020: *Meilenstein: Finale Präsentation***
+    - [ ] **Mai 29, 2020: *Präsentation***
+    - [ ] **Mai 30, 2020: *Meilenstein: Präsentation***
+    - [ ] **Mai 31, 2020: *Meilenstein: Finale Präsentation***
     - [ ] **Jun 12, 2020: *Abgabe, Meilenstein: Abgabe Dokumente***
     - [ ] **Jun 16, 2020: *Abgabe, Meilenstein: SOL Präsentation***
 
@@ -177,8 +177,8 @@ Anhand des Mindmaps habe ich eine Checkliste vorbereitet, welche - egal auf welc
     - [x] **Apr 10, 2020: Tag 4 *Meilenstein: Resume***
     - [x] **Apr 11, 2020: *Meilenstein: Überprüfung***
     - [x] **Mai 17, 2020: *Meilenstein: Plan B***
-    - [ ] **Mai 22, 2020: *Meilenstein: Präsentation***
-    - [ ] **May 24, 2020: *Meilenstein: Präsentation***
+    - [ ] **Mai 30, 2020: *Meilenstein: Präsentation***
+    - [ ] **May 31, 2020: *Meilenstein: Präsentation***
     - [ ] **Jun 12, 2020: *Abgabe***
     - [ ] **Jun 16, 2020: *Abgabe, Meilenstein: SOL Präsentation***
 
