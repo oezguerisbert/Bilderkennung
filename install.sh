@@ -6,5 +6,8 @@ echo "Installing Python Modules";
 pip install -r ./requirements.txt;
 pip3 install -r ./requirements.txt;
 python -m pip install matplotlib;
+# Working camera modules for RaspberryPi4
+python3 -m pip install opencv-python==4.1.0.25;
+
 
 echo "Installed everything!";
