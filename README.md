@@ -5,12 +5,12 @@ Schulprojekt für das Modul SOL1
 ## Installation
 
 ```
-sh .\install.sh
+sudo sh install.sh
 ```
 
 ## Start
 
 ```
-python .\cam_contours.py
+sudo python3 cam_contours.py
 ```
 Um das Program zu beenden "Q" drücken!
