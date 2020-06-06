@@ -7,6 +7,6 @@ sudo apt-get install libhdf5-serial-dev -y -qq;
 sudo apt-get install libcblas-dev-y -qq;
 
 echo "Installing Python Modules";
-pip install -r ./requirements.txt;
+pip3 install -r ./requirements.txt;
 
 echo "Installed";
