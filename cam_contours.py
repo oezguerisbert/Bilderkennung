@@ -20,7 +20,7 @@ def filler(ls="", rs=""):
     columns, rows = shutil.get_terminal_size()
     length = columns - 1
     s = ""
-    c = colorit.color("█", colorit.colors.BLUE)
+    c = colorit.color("#", colorit.colors.BLUE)
     empty = " "
     if len(ls) > 0:
         s = c + empty + ls
