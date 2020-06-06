@@ -2,12 +2,6 @@
 
 Schulprojekt für das Modul SOL1
 
-## Prepare installation
-
-```
-sudo chmod +x install.sh
-```
-
 ## Installation
 
 ```
