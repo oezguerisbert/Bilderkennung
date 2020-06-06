@@ -5,8 +5,7 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-sys.path.insert(
-    0, "C:/Users/özgür isbert/appdata/local/programs/python/python37-32/lib/site-packages")
+
 
 # Functions
 version = "0.0.1a"
